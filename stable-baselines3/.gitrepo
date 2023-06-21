@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/ingydotnet/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:DLR-RM/stable-baselines3.git
+	branch = master
+	commit = 4fdb65ecf3705ba54de5f363a9c1b51a7cbda9b3
+	parent = 60949bd424f0e62be29ed05c69b76802c9a34d5f
+	method = merge
+	cmdver = 0.4.5
