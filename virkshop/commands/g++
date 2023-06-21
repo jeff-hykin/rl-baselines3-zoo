@@ -1,0 +1,9 @@
+#!/usr/bin/env -S deno run --allow-all
+import { run } from "https://deno.land/x/quickr@0.6.31/main/run.js"
+
+// This is a wrapper around g++ purely to ignore the -stdlib=libc++ argument (designed for clang instead of gcc)
+// FIXME: this should give a useful warning if "gcc" is not saved as a variable in the system_tools.yaml
+const pathToGPLusPlus = `${JSON.parse(Deno.env.get("VIRKSHOP_NIX_SHELL_DATA")).packagePaths["gcc"]}/bin/g++`
+// "/nix/store/3ash96byagdlg1q1kwfxjv4bnqpxjdg3-gcc-wrapper-11.2.0/bin/g++"
+const { exitCode } = await run(pathToGPLusPlus, ...Deno.args.filter(each=>each!="-stdlib=libc++"))
+Deno.exit(exitCode)

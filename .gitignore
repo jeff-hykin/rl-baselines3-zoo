@@ -22,6 +22,7 @@ hub
 *.mp4
 *.json
 _build/
+.venv
 
 tests/dummy_env/build/
 

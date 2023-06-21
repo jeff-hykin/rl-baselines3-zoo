@@ -429,3 +429,73 @@
 - (package):
     load: [ "git-subrepo",]
     asBuildInput: true
+
+
+# 
+# 
+# Python
+# 
+# 
+- (package):
+    load: [ "python38",]
+    asBuildInput: true
+
+- (package):
+    load: [ "python38Packages", "setuptools" ]
+    asBuildInput: true
+
+- (package):
+    load: [ "python38Packages", "pip" ]
+    asBuildInput: true
+
+- (package):
+    load: [ "python38Packages", "virtualenv" ]
+    asBuildInput: true
+
+- (package):
+    load: [ "python38Packages", "wheel" ]
+    asBuildInput: true
+
+- (package):
+    load: [ "cmake" ]
+    asBuildInput: true
+
+- (package):
+    load: [ "pkg-config" ]
+    asBuildInput: true
+
+- (package):
+    load: [ "libffi" ]
+    asBuildInput: true
+
+- (package):
+    load: [ "libffi" ]
+    asBuildInput: true
+
+- (package):
+    load: [ "gcc" ]
+    asBuildInput: true
+    saveVariableAs: gcc # needed for some pip modules
+
+# 
+# RL zoo stuff
+# 
+- (package):
+    load: [ "gtk3" ]
+    asBuildInput: true
+
+- (package):
+    load: [ "swig" ]
+    asBuildInput: true
+
+- (package):
+    load: [ "ffmpeg" ]
+    asBuildInput: true
+
+- (package):
+    load: [ "libcxx" ]
+    asBuildInput: true
+
+- (package):
+    load: [ "stdenv", "cc", "cc" ]
+    saveVariableAs: cc
